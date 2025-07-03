@@ -1,7 +1,43 @@
 {% extends "layout.html.twig" %}
 
 {% block content %}
-    <h1>Page teams</h1>
-   
-
+    <h2>Tout sur la league</h2>
+    <p>Les players, les teams et l'actu des matchs</p>
+        
+    <h3>La team à la une</h3>
+        <section class="mainTeam">
+            <img src="{{image.equipe}}" alt={{image.alt.equipe}}></img>
+            <div>
+                <h4>{{nom de lequipe}}</h4>
+                <p>Les players</p>
+        
+                {%for player in players%}
+                <div class="card">
+                    <img src ="{{image.joueur}}" alt = {{image.joueur.alt}}></img>
+                    <p>{{name.joueur}}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        <section class="bestPlayeurs">
+            <h3>Les playeurs à la une</h3>
+            {%for player in players%}
+                <div class="card">
+                    <img src ="{{image.joueur}}" alt = {{image.joueur.alt}}></img>
+                    <p>{{name.joueur}}</p>
+                    <p>{{name.team}}</p>
+                </div>
+                {% endfor %}
+        </section>
+        <section>
+            <h3>Le dernier match</h3>
+            <div>
+                <h4>{{name.match}}</h4>
+                <p>{{date}}</p>
+                <div>
+                    <img>{{image.team_1}}</img>
+                    <img>{{image.team_2}}</img>
+                </div>
+            </div>
+        </section>
 {% endblock %}
