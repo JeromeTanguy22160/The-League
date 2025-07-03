@@ -1,6 +1,6 @@
 <?php
 
-class Games
+class Game
 {
     private ?int $id = null;
     private string $name;
