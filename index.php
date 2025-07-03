@@ -1,11 +1,11 @@
 <?php
 
-require_once __DIR__ . '/config/vendor/autoload.php';
+require "/config/autoload.php";
 
-$loader = new \Twig\Loader\FilesystemLoader('templates');
-        $twig = new \Twig\Environment($loader,[
-            'debug' => true,
-]);
+require "/vendor/autoload.php";
 
+$router = new Router();
+
+$router->handleRequest($_GET);
 
 ?>
