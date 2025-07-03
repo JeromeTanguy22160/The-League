@@ -4,7 +4,7 @@
 
 body{
     padding:2rem;
-    font-family: verdana;
+    font-family: Roboto;
     background-color:#0B132B;
     max-width:1400px;
     margin:auto;
@@ -20,6 +20,7 @@ body{
 .header .nav ul {
     display: flex;
     justify-content: space-around;
+    list-style:none
     
 }
 
