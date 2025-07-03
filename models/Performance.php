@@ -7,9 +7,7 @@
         private int $points;
         private int $assists;
         
-        public function __construct(Players $player, Games $game, int $points , int $assists){
-            $this->player = $player;
-            $this->game = $game;
+        public function __construct(int $points , int $assists){
             $this->points = $points;
             $this->assists = $assists;
         }
@@ -25,7 +23,7 @@
         }
         
         public function getGame() : Games {
-            return $this->player;
+            return $this->game;
         }
         
         public function getPoints() : int {
