@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    padding:2rem;
+    font-family: verdana;
+    background-color:#0B132B;
+    max-width:1400px;
+    margin:auto;
+}
+
+.header h1{
+    margin-bottom:3rem;
+    color:white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.header .nav ul {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.header .nav .link a{
+    color: white;
+    text-decoration:none;
+    text-transform: uppercase;
+    transition: all ease-in-out 0.2s;
+}
+
+.header .nav .link a:hover{
+     color:#D4B530;
+}
+
+main h2 ,h3 {
+    color:#D4B530;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    }
+    
+main h2{
+    font-size: 2.4rem;
+    margin-top: 3rem;
+    margin-bottom:3rem;
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    gap:4rem;
+    flex-wrap:wrap;
+    text-align: justify;
+}
+
+.card {
+    max-width: calc(100%/3.5);
+    padding: 1em;
+    text-align: center;
+}
+    
+.card p{
+    margin-bottom:3rem;
+    color: white;
+}
+
+.card img {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    height: auto;
+    transition: all ease-in-out 0.5s;
+}
+
+.card img:hover{
+    transform : scale(1.2)
+}
+main .card a {
+    white-space: nowrap;
+    padding: 1rem;
+    color:#D4B530;
+    text-transform: uppercase;
+    background-color:#0B132B;
+    border :1px solid #D4B530;
+    border-radius : 5px;
+    text-decoration:none;
+    transition: all ease-in-out 0.2s;
+}
+   
+main .card a:hover{
+    background-color:#D4B530;
+    color:#0B132B;
+}
+    
+    
