@@ -7,15 +7,21 @@ class TeamManager extends AbstractManager
     }
     
     public function findAll(): array {
+        
+        $mediaManager = new MediaManager();
+        
+        
         $query = $this->db->prepare('SELECT * FROM teams');
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
         $teams = [];
         
         foreach ($result as $teamData) {
-            $media = new Media($teamData["logo"], $teamData["alt"]);
-            $team = new Team($teamData["name"], $teamData["description"], $media);
+            $media = $mediaManager -> findOne($teamData["media"]);
+            
+            $team = new Team($teamData["name"], $teamData["description"]);
             $team->setId($teamData["id"]);
+            $team -> setMedia($media);
             $teams[] = $team;
         }
         
@@ -23,6 +29,9 @@ class TeamManager extends AbstractManager
     }
     
     public function findOne(int $id):? Team  {
+        
+        $mediaManager = new MediaManager();
+        
         $query = $this->db->prepare('SELECT * FROM teams WHERE id = :id');
         $parameters = 
         [
@@ -32,9 +41,15 @@ class TeamManager extends AbstractManager
         $result = $query->fetch(PDO::FETCH_ASSOC);
         
         if($result) {
-            $media = new Media($team["logo"], $team["alt"]);
-            $team = new Team($team["name"], $team["description"], $media);
-            $team->setId($team["id"]);
+            $media = $mediaManager -> findOne($result["media"]);
+            
+            if(!$media){
+                return null;
+            }
+                
+            $team = new Team($result["name"], $result["description"]);
+            $team -> setId($result["id"]);
+            $team -> setMedia($media);
             return $team;
         }
         

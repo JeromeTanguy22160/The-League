@@ -4,8 +4,9 @@ require "Media.php";
 
 class Team {
     private ? int $id = null;
+    private ? Media $media = null;
     
-    public function __construct(private string $name, private string $description , private Media $media){
+    public function __construct(private string $name, private string $description){
         
     }
     
@@ -30,7 +31,7 @@ class Team {
         $this -> description = $description;
     }
     
-    public function getMedia() : Media{
+    public function getMedia() :? Media{
         return $this -> media;
     }
     public function setMedia(Media $media) : void{
