@@ -1,6 +1,5 @@
 <?php
 
-require "Media.php";
 
 class Team {
     private ?int $id = null;

@@ -1,7 +1,37 @@
 {% extends "layout.html.twig" %}
 
 {% block content %}
-    <h1>Page teams</h1>
+    <h2>LES MATCHS</h2>
+    {# foreach matchs (pour chaque match créer:   #}
+    {# - une div avec le nom du match en h3    #}
+    {# - la date en paragrpahe    #}
+    {# - 2 image avec src des deux team qui s'affronte + alt #}
+    {#- un bouton qui redirige vers le résulat du match#}
+    {%for matchs in match %}
+    <div>
+        <h3>VENDETTA VS OWLS</h3>
+        <p>17/01/2024</p>
+        <img src="#" alt=""></img>
+        <img src="#" alt=""></img>
+        <button>Détails du MATCH</button>
+    </div>
+    
+    <div>
+        <h3>PANTHERS VS SPARROW</h3>
+        <p>10/01/2024</p>
+        <img src="#" alt=""></img>
+        <img src="#" alt=""></img>
+        <button>Détails du MATCH</button>
+    </div>
    
+    <div>
+        <h3>OWLS VS PARROTS</h3>
+        <p>04/01/2024</p>
+        <img src="#" alt=""></img>
+        <img src="#" alt=""></img>
+        <button>Détails du MATCH</button>
+    </div>
+   
+
 
 {% endblock %}
