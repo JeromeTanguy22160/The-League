@@ -18,7 +18,7 @@
         
         $teams = $teamManagerTeams -> findAll();
         
-        require "templates/teams.html.twig";
+        echo $twig->render('teams.html.twig', ['teams' => $teams]);
 
         }
         
