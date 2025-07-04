@@ -6,7 +6,7 @@ class GameController{
         public function matchs() : void {
 
         $loader = new \Twig\Loader\FilesystemLoader('templates');
-                $twig = new \Twig\Environment($loader,[
+        $twig = new \Twig\Environment($loader,[
                     'debug' => true,
         ]);
         
@@ -15,7 +15,7 @@ class GameController{
         
         $games = $GameManagerTeams -> findAll();
         
-        require "templates/matchs.html.twig";
+        echo $twig->render('matchs.html.twig', ['games' => $games]);
 
         }
         
@@ -27,12 +27,14 @@ class GameController{
                     'debug' => true,
         ]);
         
+        $id = isset($_GET["id"]);
+        $id = $_GET["id"];
         
         $GameManagerTeams = new GameManager();
         
-        $games = $GameManagerTeams -> findOne();
+        $game = $GameManagerTeams -> findOne($id);
         
-        require "templates/match.html.twig";
+        echo $twig->render('match.html.twig', ['game' => $game]);
 
         }
     }

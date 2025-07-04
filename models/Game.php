@@ -4,14 +4,14 @@ class Game
 {
     private ?int $id = null;
     private string $name;
-    private \DateTimeImmutable $created_at;
+    private string $date ;
     private int $team_1;
     private int $team_2;
     private int $winner;
 
-    public function __construct(string $name, \DateTimeImmutable $created_at, int $team_1, int $team_2, int $winner) {
+    public function __construct(string $name, string $date, int $team_1, int $team_2, int $winner) {
         $this->name = $name;
-        $this->created_at = $created_at;
+        $this->date = $date;
         $this->team_1 = $team_1;
         $this->team_2 = $team_2;
         $this->winner = $winner;
@@ -33,12 +33,12 @@ class Game
         $this->name = $name;
     }
 
-    public function getCreatedAt(): \DateTimeImmutable {
-        return $this->created_at;
+    public function getDate(): string {
+        return $this->date;
     }
 
-    public function setCreatedAt(\DateTimeImmutable $created_at): void {
-        $this->created_at = $created_at;
+    public function setDate(string $date): void {
+        $this->date = $date;
     }
 
     public function getTeam1(): int {
