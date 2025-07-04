@@ -77,9 +77,6 @@ class PerformanceManager extends AbstractManager{
     
         return $performances;
     }
-<<<<<<< HEAD
-}
-=======
     
     
 }
@@ -102,4 +99,3 @@ class PerformanceManager extends AbstractManager{
 
 
 
->>>>>>> 9a4fcc2e64748057cca9e3ee87931bc61923adaa

@@ -17,11 +17,14 @@ class TeamManager extends AbstractManager
         $teams = [];
         
         foreach ($result as $teamData) {
-            $media = $mediaManager -> findOne($teamData["media"]);
             
             $team = new Team($teamData["name"], $teamData["description"]);
             $team->setId($teamData["id"]);
-            $team -> setMedia($media);
+            
+        if (isset($teamData["media"]) && !is_null($teamData["media"])) {
+            $media = $mediaManager->findOne((int) $teamData["media"]);
+            $team->setMedia($media);
+        }
             $teams[] = $team;
         }
         
