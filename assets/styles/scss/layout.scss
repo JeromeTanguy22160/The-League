@@ -11,32 +11,38 @@ body{
     font-family: Roboto;
     background-color:#0B132B;
     max-width:1400px;
-    margin:auto
+    margin:auto;
     
     .header{
+        margin-bottom:5rem;
         
-        .header h1{
-        margin-bottom:3rem;
-        color:white;
-        text-align: center;
-        text-transform: uppercase;
+        h1{
+            margin-bottom:3rem;
+            color:white;
+            text-align: center;
+            text-transform: uppercase;
         }
         
-        .nav .link {
-            display: flex;
-            justify-content: space-around;
-            list-style:none
-            
-            a{
-                color: white;
-                text-decoration:none;
-                text-transform: uppercase;
-                transition: all ease-in-out 0.2s;
+        .nav{
+            ul{
+                display: flex;
+                justify-content: space-around;
+                list-style:none;
                 
-                a:hover{
-                    color:#D4B530;
-                }
+                .link{
+                    a{
+                        color: white;
+                        text-decoration:none;
+                        text-transform: uppercase;
+                        transition: all ease-in-out 0.2s;
+                        
+                        &:hover{
+                            color:#D4B530;
+                        }
+                    }
+                }    
             }
+            
         }
         
     }
