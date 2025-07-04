@@ -1,17 +1,18 @@
 {% extends "layout.html.twig" %}
 
 {% block content %}
+<<<<<<< HEAD
 
+=======
         <h2>{{ data.title }}</h2>
+>>>>>>> 4571c8525c99de7740194d051c8fc49854dcced2
         <div class = "cards">
-        {% for team in teams %}
             <div class = "card-team">
-                <h3>{{ team.name }}</h3>
+                <h2>{{ team.name }}</h3>
                 <img src="{{ player.logo }}" alt={{ player.logo }}>
                 <p>{{ player.name }}</p>
                 <a href="#">{{ team.button_text }}</a>
             </div>
-        {% endfor %}
         </div>
 
 {% endblock %}

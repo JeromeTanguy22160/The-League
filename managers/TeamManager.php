@@ -44,15 +44,14 @@ class TeamManager extends AbstractManager
         $result = $query->fetch(PDO::FETCH_ASSOC);
         
         if($result) {
-            $media = $mediaManager -> findOne($result["media"]);
             
-            if(!$media){
-                return null;
-            }
-                
             $team = new Team($result["name"], $result["description"]);
-            $team -> setId($result["id"]);
-            $team -> setMedia($media);
+            $team->setId($result["id"]);
+            
+        if (isset($result["media"]) && !is_null($result["media"])) {
+            $media = $result->findOne((int) $result["media"]);
+            $team->setMedia($media);
+        }
             return $team;
         }
         

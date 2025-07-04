@@ -17,11 +17,10 @@ body{
     text-transform: uppercase;
 }
 
-.header .nav ul {
+.header .nav li {
     display: flex;
     justify-content: space-around;
     list-style:none
-    
 }
 
 .header .nav .link a{
@@ -46,6 +45,21 @@ main h2{
     font-size: 2.4rem;
     margin-top: 3rem;
     margin-bottom:3rem;
+}
+
+button {
+    border: 2px solid #D4B530;
+    padding: 0.5rem;
+    border-radius: 7px;
+    background-color: #0B132B;
+    color: #D4B530;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #D4B530;
+    color: #0B132B;
 }
 
 .cards {
