@@ -7,7 +7,7 @@ class Players
     private ?Media $portrait;
     private ?int $team = null; 
       
-    public function __construct(string $nickname, string $bio, int $portrait, ?int $team = null)
+    public function __construct(string $nickname, string $bio, ?Media $portrait, ?int $team = null)
    {
        
         $this->nickname = $nickname;
@@ -31,7 +31,7 @@ class Players
         return $this->bio;
     }
 
-    public function getPortrait(): int
+    public function getPortrait(): ?Media
     {
         return $this->portrait;
     }
@@ -56,7 +56,7 @@ class Players
         $this->bio = $bio;
     }
 
-    public function setPortrait(int $portrait): void
+    public function setPortrait(Media $portrait): void
     {
         $this->portrait = $portrait;
     }

@@ -9,6 +9,7 @@ class HomeController{
                     'debug' => true,
         ]);
         
+        
         $teamManagerTeams = new TeamManager();
         
         $teams = $teamManagerTeams -> findAll();

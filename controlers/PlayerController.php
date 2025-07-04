@@ -19,14 +19,12 @@ class PlayerController{
 
         }
         
-         public function match() : void {
-
+         public function player() : void {
 
         $loader = new \Twig\Loader\FilesystemLoader('templates');
                 $twig = new \Twig\Environment($loader,[
                     'debug' => true,
         ]);
-        
         
         $id = isset($_GET["id"]);
         $id = $_GET["id"];
