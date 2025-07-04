@@ -1,20 +1,15 @@
 {% extends "layout.html.twig" %}
 
 {% block content %}
-<<<<<<< HEAD
-    
-        <h2> test </h2>
-=======
-        <h2>COUCOU</h2>
+
         <h2>{{ data.title }}</h2>
->>>>>>> a3d4b02712f06b9da4a4daf0cb6bd6cfa61e31b5
         <div class = "cards">
         {% for team in teams %}
             <div class = "card">
                 <img src="{{ team.logo }}" alt={{ team.logo }}>
                 <h3>{{ team.name }}</h3>
                 <p>{{ team.description }}</p>
-                <a href="#">{{ team.button_text }}</a>
+                <button href="">DéCOUVREZ {{ team.name }}</button>
             </div>
         {% endfor %}
         </div>
