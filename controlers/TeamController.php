@@ -12,8 +12,6 @@
                     'debug' => true,
         ]);
         
-        $route = "teams";
-        
         $teamManagerTeams = new TeamManager();
         
         $teams = $teamManagerTeams -> findAll();
@@ -22,22 +20,21 @@
 
         }
         
-         public function team() : void {
-            
+        public function team() : void {
         
-
         $loader = new \Twig\Loader\FilesystemLoader('templates');
                 $twig = new \Twig\Environment($loader,[
                     'debug' => true,
         ]);
         
-        $route = "teams";
+        $id = isset($_GET["id"]);
+        $id = $_GET["id"];
         
         $teamManagerTeams = new TeamManager();
         
-        $teams = $teamManagerTeams -> findOne();
+        $team = $teamManagerTeams -> findOne($id);
         
-        require "templates/team.html.twig";
+        echo $twig->render('team.html.twig', ['team' => $team]);
 
         }
     }
