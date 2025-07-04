@@ -3,11 +3,17 @@
 class Router
 {
     private TeamController $tc;
+    private GameController $gc;
+    private PlayerController $pc;
+    private HomeController $hc;
     
 
     public function __construct()
     {
         $this->tc = new TeamController();
+        $this->gc = new GameController();
+        $this->pc = new PlayerController();
+        $this->hc = new HomeController();
     }
     
     
@@ -16,32 +22,32 @@ class Router
     {
         if(!isset($get["route"]))
         {
-            $this->tc->home();
+            $this->hc->home();
         }
         else if(isset($get["route"]) && $get["route"]  === "players")
         {
-            $this->tc->players();
+            $this->pc->players();
         }
         else if(isset($get["route"]) && $get["route"] === "player")
         {
             if(isset($get["id"])) {
-              $this->tc->player($get["id"]);
+              $this->pc->player($get["id"]);
             }
             else {
-                $this->tc>home();
+                $this->hc>home();
             }
         }
         else if(isset($get["route"]) && $get["route"] === "matchs")
         {
-            $this->tc->matchs();
+            $this->gc->matchs();
         }
         else if(isset($get["route"]) && $get["route"] === "match")
         {
             if(isset($get["id"])) {
-              $this->tc->match($get["id"]);
+              $this->gc->match($get["id"]);
             }
             else {
-                $this->tc>home();
+                $this->hc>home();
             }
         }
         else if(isset($get["route"]) && $get["route"] === "teams")
@@ -54,7 +60,7 @@ class Router
               $this->tc->team($get["id"]);
             }
             else {
-                $this->tc>home();
+                $this->hc>home();
             }
         }
     }

@@ -49,7 +49,7 @@ class TeamManager extends AbstractManager
             $team->setId($result["id"]);
             
         if (isset($result["logo"]) && !is_null($result["logo"])) {
-            $media = $mediamanager->findOne($result["logo"]);
+            $media = $mediaManager->findOne($result["logo"]);
             $team->setMedia($media);
         }
             return $team;
