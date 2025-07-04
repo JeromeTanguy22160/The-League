@@ -1,112 +1,97 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-body{
-    padding:2rem;
-    font-family: Roboto;
-    background-color:#0B132B;
-    max-width:1400px;
-    margin:auto;
+body {
+  padding: 2rem;
+  font-family: Roboto;
+  background-color: #0B132B;
+  max-width: 1400px;
+}
+body margin:auto .header .header h1 {
+  margin-bottom: 3rem;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+body margin:auto .header .nav .link {
+  display: flex;
+  justify-content: space-around;
+}
+body margin:auto .header .nav .link list-style:none a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all ease-in-out 0.2s;
+}
+body margin:auto .header .nav .link list-style:none a a:hover {
+  color: #D4B530;
 }
 
-.header h1{
-    margin-bottom:3rem;
-    color:white;
-    text-align: center;
-    text-transform: uppercase;
+.teams h2, .teams h3 {
+  color: #D4B530;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.teams h2 {
+  font-size: 2.4rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.teams .cards {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  gap: 4rem;
+  flex-wrap: wrap;
+  text-align: justify;
+}
+.teams .cards .card {
+  max-width: 28.5714285714%;
+  padding: 1em;
+  text-align: center;
+}
+.teams .cards .card p {
+  margin-bottom: 3rem;
+  color: white;
+}
+.teams .cards .card img {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  height: auto;
+  transition: all ease-in-out 0.5s;
+}
+.teams .cards .card img:hover {
+  transform: scale(1.2);
+}
+.teams .cards .card img a {
+  white-space: nowrap;
+  padding: 1rem;
+  color: #D4B530;
+  text-transform: uppercase;
+  background-color: #0B132B;
+  border: 1px solid #D4B530;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all ease-in-out 0.2s;
+}
+.teams .cards .card img a:hover {
+  background-color: #D4B530;
+  color: #0B132B;
+}
+.teams .cards .card img button {
+  border: 2px solid #D4B530;
+  padding: 0.5rem;
+  border-radius: 7px;
+  background-color: #0B132B;
+  color: #D4B530;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.teams .cards .card img button:hover {
+  background-color: #D4B530;
+  color: #0B132B;
 }
 
-.header .nav li {
-    display: flex;
-    justify-content: space-around;
-    list-style:none
-}
-
-.header .nav .link a{
-    color: white;
-    text-decoration:none;
-    text-transform: uppercase;
-    transition: all ease-in-out 0.2s;
-}
-
-.header .nav .link a:hover{
-     color:#D4B530;
-}
-
-main h2 ,h3 {
-    color:#D4B530;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 2rem;
-    }
-    
-main h2{
-    font-size: 2.4rem;
-    margin-top: 3rem;
-    margin-bottom:3rem;
-}
-
-button {
-    border: 2px solid #D4B530;
-    padding: 0.5rem;
-    border-radius: 7px;
-    background-color: #0B132B;
-    color: #D4B530;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #D4B530;
-    color: #0B132B;
-}
-
-.cards {
-    width: 100%;
-    display: flex;
-    justify-content: left;
-    gap:4rem;
-    flex-wrap:wrap;
-    text-align: justify;
-}
-
-.card {
-    max-width: calc(100%/3.5);
-    padding: 1em;
-    text-align: center;
-}
-    
-.card p{
-    margin-bottom:3rem;
-    color: white;
-}
-
-.card img {
-    margin-bottom: 1.5rem;
-    width: 100%;
-    height: auto;
-    transition: all ease-in-out 0.5s;
-}
-
-.card img:hover{
-    transform : scale(1.2)
-}
-main .card a {
-    white-space: nowrap;
-    padding: 1rem;
-    color:#D4B530;
-    text-transform: uppercase;
-    background-color:#0B132B;
-    border :1px solid #D4B530;
-    border-radius : 5px;
-    text-decoration:none;
-    transition: all ease-in-out 0.2s;
-}
-   
-main .card a:hover{
-    background-color:#D4B530;
-    color:#0B132B;
-}
-    
-    
+/*# sourceMappingURL=style.css.map */

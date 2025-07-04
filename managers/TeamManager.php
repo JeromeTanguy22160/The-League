@@ -20,9 +20,9 @@ class TeamManager extends AbstractManager
             
             $team = new Team($teamData["name"], $teamData["description"]);
             $team->setId($teamData["id"]);
-            
-        if (isset($teamData["media"]) && !is_null($teamData["media"])) {
-            $media = $mediaManager->findOne((int) $teamData["media"]);
+        
+        if (isset($teamData["logo"]) && !is_null($teamData["logo"])) {
+            $media = $mediaManager->findOne($teamData["logo"]);
             $team->setMedia($media);
         }
             $teams[] = $team;
@@ -48,8 +48,8 @@ class TeamManager extends AbstractManager
             $team = new Team($result["name"], $result["description"]);
             $team->setId($result["id"]);
             
-        if (isset($result["media"]) && !is_null($result["media"])) {
-            $media = $result->findOne((int) $result["media"]);
+        if (isset($result["logo"]) && !is_null($result["logo"])) {
+            $media = $mediamanager->findOne($result["logo"]);
             $team->setMedia($media);
         }
             return $team;

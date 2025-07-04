@@ -1,0 +1,45 @@
+///BASE////
+* {
+    box-sizing: border-box;
+}
+
+////LAYOUT///
+
+body{
+    
+    padding:2rem;
+    font-family: Roboto;
+    background-color:#0B132B;
+    max-width:1400px;
+    margin:auto
+    
+    .header{
+        
+        .header h1{
+        margin-bottom:3rem;
+        color:white;
+        text-align: center;
+        text-transform: uppercase;
+        }
+        
+        .nav .link {
+            display: flex;
+            justify-content: space-around;
+            list-style:none
+            
+            a{
+                color: white;
+                text-decoration:none;
+                text-transform: uppercase;
+                transition: all ease-in-out 0.2s;
+                
+                a:hover{
+                    color:#D4B530;
+                }
+            }
+        }
+        
+    }
+    
+}
+
