@@ -5,8 +5,6 @@
         
         public function teams() : void {
             
-        
-
         $loader = new \Twig\Loader\FilesystemLoader('templates');
                 $twig = new \Twig\Environment($loader,[
                     'debug' => true,

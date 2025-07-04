@@ -10,11 +10,11 @@ class HomeController{
         ]);
         
         
-        $playersManagerTeams = new PlayersManager();
+        $teamManagerTeams = new TeamManager();
         
-        $players = $playersManagerTeams -> findAll();
+        $teams = $teamManagerTeams -> findAll();
         
-        echo $twig->render('teams.html.twig', ['players' => $players]);
+        echo $twig->render('home.html.twig', ['teams' => $teams]);
 
         }
      

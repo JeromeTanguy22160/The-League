@@ -11,7 +11,7 @@ class PlayersManager extends AbstractManager
     
     public function findOne(int $id): ?Players
 {
-    $query = $this->pdo->prepare('SELECT * FROM players WHERE id = :id');
+    $query = $this->db->prepare('SELECT * FROM players WHERE id = :id');
     $query->execute(['id' => $id]);
     $row = $query->fetch(PDO::FETCH_ASSOC);
     
@@ -20,8 +20,7 @@ class PlayersManager extends AbstractManager
         
         $portrait = $mm->findOne($row['portrait']);
         
-        
-        $player = new Players($row['nickname'], $row['bio'], $row['portrait'], $row['team']);
+        $player = new Players($row['nickname'], $row['bio'], $portrait, $row['team']);
         $player->setId($row['id']);
         return $player;
     }
@@ -39,7 +38,7 @@ class PlayersManager extends AbstractManager
        
        foreach ($results as $row) {
            $portrait = $mm->findOne($row['portrait']);
-           $player = new Players($row['nickname'], $row['bio'], $row['portrait'], $row['team']);
+           $player = new Players($row['nickname'], $row['bio'], $portrait, $row['team']);
            $player->setId($row['id']);
            $players[] = $player;
        }
