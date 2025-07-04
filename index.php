@@ -4,7 +4,7 @@
     
     require_once __DIR__. '/config/autoload.php';
     
-    $routeur = new Routeur();
+    $router = new Router();
     
     $router->handleRequest($_GET);
 

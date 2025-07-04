@@ -1,7 +1,6 @@
 <?php
 
-require_once 'Media.php';
-require_once 'MediaManager.php';
+
 
 class PlayersManager extends AbstractManager
 {
