@@ -1,6 +1,6 @@
 <?php
 
-require "/config/autoload.php";
+require "services/autoload.php";
 
 require "/vendor/autoload.php";
 
