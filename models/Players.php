@@ -7,7 +7,7 @@ class Players
     private ?Media $portrait;
     private ?int $team = null; 
       
-    public function __construct(string $nickname, string $bio, ?Media $portrait, ?int $team = null)
+    public function __construct(string $nickname, string $bio)
    {
        
         $this->nickname = $nickname;

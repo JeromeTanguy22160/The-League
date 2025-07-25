@@ -9,7 +9,7 @@
                     <img src="{{ team.getMedia().getUrl() }}" alt={{ team.getMedia().getAlt() }}>
                     <h3>{{ team.name }}</h3>
                     <p>{{ team.description }}</p>
-                    <a href="#">Découvrez {{ team.name }}</a>
+                    <a href="index.php?route=team&id={{ team.id }}">Découvrez {{ team.name }}</a>
                 </div>
             {% endfor %}
             </div>

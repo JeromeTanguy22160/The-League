@@ -28,11 +28,13 @@
         $id = isset($_GET["id"]);
         $id = $_GET["id"];
         
+        $playerManagerTeams = new PlayerManager();
         $teamManagerTeams = new TeamManager();
         
+        $players = $playerManagerTeams -> findAll();
         $team = $teamManagerTeams -> findOne($id);
         
-        echo $twig->render('team.html.twig', ['team' => $team]);
+        echo $twig->render('team.html.twig', ['team' => $team],["players" => $players]);
 
         }
     }
